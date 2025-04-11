@@ -42,6 +42,7 @@ class PredictionInput(BaseModel):
 
 class PredictionOutput(BaseModel):
     prediction: bool
+    probability: float
 
 class Message_Error(BaseModel):
     status_code: int
