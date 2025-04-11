@@ -7,7 +7,7 @@ router = APIRouter()
 prepare_data = PrepareData()
 prediction_model = PredictionModel()
 
-@router.post('/fraud/predict',status_code=status.HTTP_200_OK,response_model=PredictionOutput)
+@router.post('/fraud/predict',status_code=status.HTTP_200_OK,response_model=PredictionOutput, tags=["Predicción de Fraude"])
 def predict(pred_input: PredictionInput):
     try:
         df_pred_input = prepare_data.transform_data_to_predict(pred_input)
